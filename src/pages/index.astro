@@ -18,26 +18,29 @@ import { Content as About } from './about.md';
 			<a class="text-gradient" href="./resume.pdf">Click to see my resume.</a>
 		</section>
 		<section>
-			<h2 class="text-gradient">Work Experience</h2>
-			<ProjectCard title="Backend Engineer Intern @ Sagara Technology" href="#" stacks={["Django REST Framework", "PostgreSQL" , "Google Cloud Platform" ]}>
-				<h3>from May 2021 to Sep 2021</h3>
-				<ul>
-					<li>
-						Developing an API and database for an online loan management dashboard for one of the leading
-						banks in Indonesia
-					</li>
-					<li>
-						Working using SCRUM development cycle with a total of 16 weekly sprints.
-					</li>
-					<li>
-						Develop using Django REST Framework and PostgreSQL database deployed to Google Cloud Platform.
-					</li>
-				</ul>
-			</ProjectCard>
+			<h2 class="text-gradient">#work-experience: &lbrack;</h2>
+			<div class="indent-level">
+				<ProjectCard title="Backend Engineer Intern @ Sagara Technology" href="#" stacks={["Django REST Framework", "PostgreSQL" , "Google Cloud Platform" ]}>
+					<h3>from May 2021 to Sep 2021</h3>
+					<ul>
+						<li>
+							Developing an API and database for an online loan management dashboard for one of the leading
+							banks in Indonesia
+						</li>
+						<li>
+							Working using SCRUM development cycle with a total of 16 weekly sprints.
+						</li>
+						<li>
+							Develop using Django REST Framework and PostgreSQL database deployed to Google Cloud Platform.
+						</li>
+					</ul>
+				</ProjectCard>
+			</div>
+			<h2 class="text-gradient">&rbrack;</h2>
 		</section>
 		<section>
-			<h2 class="text-gradient">Projects</h2>
-			<ul role="list" class="link-card-grid">
+			<h2 class="text-gradient">#projects: &lbrack;</h2>
+			<ul role="list" class="link-card-grid indent-level">
 				<ProjectCard href="https://jahnsmichael.itch.io/scaffcode-inc" title="Scaffcode, Inc." stacks={["Godot HTML5"] }>
 					A game-based learning app applying constructivism scaffolding to introduce basic programming
 					concepts to high school students.
@@ -54,31 +57,44 @@ import { Content as About } from './about.md';
 					guessing your health condition using decision tree algorithm
 				</ProjectCard>
 			</ul>
+			<h2 class="text-gradient">&rbrack;</h2>
 		</section>
 		<section>
-			<h2 class="text-gradient">Skills</h2>
-			<h3>Programming Languages</h3>
-			<Chip>Javascript</Chip>
-			<Chip>Python</Chip>
-			<Chip>Typescript</Chip>
-			<Chip>Java</Chip>
-			<Chip>C#</Chip>
-			<h3>Frontend Frameworks</h3>
-			<Chip>React</Chip>
-			<Chip>Vue</Chip>
-			<Chip>Svelte</Chip>
-			<Chip>Astro</Chip>
-			<h3>Backend Frameworks</h3>
-			<Chip>Django REST Framework</Chip>
-			<Chip>SpringBoot</Chip>
-			<h3>Other Stuff</h3>
-			<h4>Game Engine</h4>
-			<Chip>Godot</Chip>
-			<Chip>Unity</Chip>
-			<h4>Design and Art Tools</h4>
-			<Chip>Inkscape</Chip>
-			<Chip>Figma</Chip>
-			<Chip>Blender</Chip>
+			<h2 class="text-gradient">#skills &lbrace;</h2>
+			<div class="indent-level">
+				<h3>.programming-languages: </h3>
+				<Chip>Javascript</Chip>
+				<Chip>Python</Chip>
+				<Chip>Typescript</Chip>
+				<Chip>Java</Chip>
+				<Chip>C#</Chip>
+				<h3>.frontend-frameworks: </h3>
+				<Chip>React</Chip>
+				<Chip>Vue</Chip>
+				<Chip>Svelte</Chip>
+				<Chip>Astro</Chip>
+				<h3>.backend-frameworks: </h3>
+				<Chip>Django REST Framework</Chip>
+				<Chip>SpringBoot</Chip>
+				<h3>.others: </h3>
+				<h4>.game-engine: </h4>
+				<Chip>Godot</Chip>
+				<Chip>Unity</Chip>
+				<h4>.design-and-art-tools: </h4>
+				<Chip>Inkscape</Chip>
+				<Chip>Figma</Chip>
+				<Chip>Blender</Chip>
+			</div>
+			<h2 class="text-gradient">&rbrace;</h2>
+		</section>
+		<section class="contact">
+			<h2 class="text-gradient">#contact-me</h2>
+			<div class="contact-list">
+				<a class="text-gradient" href="mailto:michael.jf.jm@gmail.com">mail</a>
+				<a class="text-gradient" href="https://github.com/JahnsMichael/">GitHub</a>
+				<a class="text-gradient" href="https://www.instagram.com/jahnsmichael_/">Instagram</a>
+				<a class="text-gradient" href="https://jahnsmichael.itch.io/scaffcode-inc">itch.io</a>
+			</div>
 		</section>
 	</main>
 </Layout>
@@ -109,5 +125,24 @@ import { Content as About } from './about.md';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 1rem;
 		padding: 0;
+	}
+
+	.contact-list {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+	}
+
+	.contact-list > * {
+		padding: 0.25rem;
+	}
+
+	.contact > h2 {
+		text-align: center;
+	}
+
+	.indent-level {
+		padding-left: 1rem;
+		border-left: 2px dashed rgba(90, 9, 121, 1);
 	}
 </style>
