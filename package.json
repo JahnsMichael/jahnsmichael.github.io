@@ -10,8 +10,9 @@
   },
   "devDependencies": {
     "@astrojs/svelte": "^0.1.5",
-    "@astrojs/tailwind": "^0.2.1",
+    "@astrojs/vue": "^0.2.0",
     "astro": "^1.0.0-beta.53",
-    "svelte": "^3.48.0"
+    "svelte": "^3.48.0",
+    "vue": "^3.2.37"
   }
 }

@@ -1,69 +1,101 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Card from '../components/Card.svelte';
+import ProjectCard from '../components/ProjectCard.svelte';
+import Chip from '../components/Chip.svelte';
+import { Content as About } from './about.md';
 ---
-<Layout title="Welcome to Astro.">
+
+<Layout title="Jahns Michael">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br/>
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card href="https://docs.astro.build/" title="Documentation" body="Learn how Astro works and explore the official API docs." /> 
-			<Card href="https://astro.build/integrations/" title="Integrations" body="Supercharge your project with new frameworks and libraries." /> 
-			<Card href="https://astro.build/themes/" title="Themes" body="Explore a galaxy of community-built starter themes." /> 
-			<Card href="https://astro.build/chat/" title="Chat" body="Come say hi to our amazing Discord community. ❤️" />
-		</ul>
+		<header>
+			<h3>Hello, my name is</h3>
+			<h1 class="text-gradient">Jahns Michael</h1>
+			<h3>I am a <span class="text-gradient">software developer</span></h3>
+		</header>
+		<hr>
+		<section>
+			<About />
+		</section>
+		<section>
+			<h2 class="text-gradient">Work Experience</h2>
+			<ProjectCard title="Backend Engineer Intern @ Sagara Technology" href="#" stacks={["Django REST Framework", "PostgreSQL", "Google Cloud Platform"]}>
+				<h3>from May 2021 to Sep 2021</h3>
+				<ul>
+					<li>
+						Developing an API and database for an online loan management dashboard for one of the leading banks in Indonesia
+					</li>
+					<li>
+						Working using SCRUM development cycle with a total of 16 weekly sprints.
+					</li>
+					<li>
+						Develop using Django REST Framework and PostgreSQL database deployed to Google Cloud Platform.
+					</li>
+				</ul>
+			</ProjectCard>
+		</section>
+		<section>
+			<h2 class="text-gradient">Projects</h2>
+			<ul role="list" class="link-card-grid">
+				<ProjectCard href="#" title="TBCare" stacks={["Django REST Framework", "React" ] }>
+					Open-source app for tracking TBC cases
+				</ProjectCard>
+				<ProjectCard href="#" title="KumaKuma" stacks={["Django"] }>
+					a FnB Recipe Blog Maker
+				</ProjectCard>
+				<ProjectCard href="#" title="Jarvis Healtchecker" stacks={["Django"] }>
+					guessing your health condition using decision tree algorithm
+				</ProjectCard>
+			</ul>
+		</section>
+		<section>
+			<h2 class="text-gradient">Skills</h2>
+			<h3>Programming Languages</h3>
+			<Chip>Javascript</Chip>
+			<Chip>Python</Chip>
+			<Chip>Typescript</Chip>
+			<Chip>Java</Chip>
+			<Chip>C#</Chip>
+			<h3>Frontend Frameworks</h3>
+			<Chip>React</Chip>
+			<Chip>Vue</Chip>
+			<Chip>Svelte</Chip>
+			<h3>Backend Frameworks</h3>
+			<Chip>Django REST Framework</Chip>
+			<Chip>SpringBoot</Chip>
+			<h3>Other Stuff</h3>
+			<h4>Game Engine</h4>
+			<Chip>Godot</Chip>
+			<Chip>Unity</Chip>
+			<h4>Design and Art Tools</h4>
+			<Chip>Inkscape</Chip>
+			<Chip>Figma</Chip>
+			<Chip>Blender</Chip>
+		</section>
 	</main>
 </Layout>
 
 <style>
 	:root {
-		--astro-gradient: linear-gradient(0deg,#4F39FA, #DA62C4);
+		--astro-gradient: linear-gradient(0deg, #4F39FA, #DA62C4);
 	}
 
-	h1 {
-		margin: 2rem 0;
+	header,
+	section {
+		margin: 4rem 0;
+	}
+
+	header h1,
+	header h3 {
+		margin-block: 0.25rem;
 	}
 
 	main {
 		margin: auto;
-    	padding: 1em;
+		padding: 1em;
 		max-width: 60ch;
 	}
 
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%, 100% { background-position-y: 0%; }
-		50% { background-position-y: 80%; }
-	}
-
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4F39FA;
-		padding: 1.0rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
