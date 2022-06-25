@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.svelte';
 import ProjectCard from '../components/ProjectCard.svelte';
 import Chip from '../components/Chip.svelte';
 import { Content as About } from './about.md';
@@ -16,14 +15,16 @@ import { Content as About } from './about.md';
 		<hr>
 		<section>
 			<About />
+			<a class="text-gradient" href="./resume.pdf">Click to see my resume.</a>
 		</section>
 		<section>
 			<h2 class="text-gradient">Work Experience</h2>
-			<ProjectCard title="Backend Engineer Intern @ Sagara Technology" href="#" stacks={["Django REST Framework", "PostgreSQL", "Google Cloud Platform"]}>
+			<ProjectCard title="Backend Engineer Intern @ Sagara Technology" href="#" stacks={["Django REST Framework", "PostgreSQL" , "Google Cloud Platform" ]}>
 				<h3>from May 2021 to Sep 2021</h3>
 				<ul>
 					<li>
-						Developing an API and database for an online loan management dashboard for one of the leading banks in Indonesia
+						Developing an API and database for an online loan management dashboard for one of the leading
+						banks in Indonesia
 					</li>
 					<li>
 						Working using SCRUM development cycle with a total of 16 weekly sprints.
@@ -38,13 +39,16 @@ import { Content as About } from './about.md';
 			<h2 class="text-gradient">Projects</h2>
 			<ul role="list" class="link-card-grid">
 				<ProjectCard href="https://jahnsmichael.itch.io/scaffcode-inc" title="Scaffcode, Inc." stacks={["Godot HTML5"] }>
-					A game-based learning app applying constructivism scaffolding to introduce basic programming concepts to high school students.
+					A game-based learning app applying constructivism scaffolding to introduce basic programming
+					concepts to high school students.
 				</ProjectCard>
 				<ProjectCard href="#" title="TBCare" stacks={["Django REST Framework", "React" ] }>
 					Open-source app for tracking TBC cases
 				</ProjectCard>
-				<ProjectCard href="#" title="KumaKuma" stacks={["Django"] }>
-					a FnB Recipe Blog Maker
+				<ProjectCard href="https://clipy.site/" title="Clipy" stacks={["React", "Express", "Firebase"]}>
+					clipy.site is a video marketing Progressive Web App that tends to help micro, small, or medium
+					businesses to market their products by creating theme-personalized video ads and links pages.
+					clipy.site built using React.js, Express API, and Firebase Services.
 				</ProjectCard>
 				<ProjectCard href="#" title="Jarvis Healtchecker" stacks={["Django"] }>
 					guessing your health condition using decision tree algorithm
@@ -63,6 +67,7 @@ import { Content as About } from './about.md';
 			<Chip>React</Chip>
 			<Chip>Vue</Chip>
 			<Chip>Svelte</Chip>
+			<Chip>Astro</Chip>
 			<h3>Backend Frameworks</h3>
 			<Chip>Django REST Framework</Chip>
 			<Chip>SpringBoot</Chip>
