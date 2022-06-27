@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Quicksand';
+    src: url('./fonts/Quicksand-VariableFont_wght.ttf') format('ttf');
+}
+
 :root {
     --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
     --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
@@ -90,7 +95,6 @@ em {
 
 .text-gradient:is(:hover),
 strong:is(:hover),
-em:is(:hover)
-{
+em:is(:hover) {
     filter: var(--drop-shadow);
 }
